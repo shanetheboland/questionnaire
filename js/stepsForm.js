@@ -213,10 +213,6 @@
 		this.questionStatus.appendChild( this.nextQuestionNum );
 	}
 
-	// submits the form
-	stepsForm.prototype._submit = function() {
-		this.options.onSubmit( this.el );
-	}
 
 	// TODO (next version..)
 	// the validation function
