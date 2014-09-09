@@ -47,7 +47,7 @@
 							</li>
 							<input type="hidden" name="_next" value=0"http://shaneboland.com/questionnaire/thankyou.html" />
 							<input type="hidden" name="_subject" value="Website Questionnaire | Shane Boland" /> 
-
+<button class="submit" id="submit" value="Send" type="submit">Send answers</button>
 						</ol><!-- /questions -->
 						<div class="controls">
 							<button class="next"></button>
@@ -60,7 +60,6 @@
 						</div><!-- / controls -->
 					</div><!-- /simform-inner -->
 					<span class="final-message"></span>
-					<button class="submit" id="submit" value="Send" type="submit">Send answers</button>
 				</form><!-- /simform -->	
 				<p>Made by Shane Boland</p>		
 			</section>
@@ -82,7 +81,7 @@
 					var messageEl = theForm.querySelector( '.final-message' );
 					messageEl.innerHTML = 'Thank You! I will be in touch soon.';
 					classie.addClass( messageEl, 'show' );
-					
+
 					document.getElementById('submit').click();
 				}
 			} );
