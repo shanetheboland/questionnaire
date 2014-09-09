@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -30,22 +31,24 @@
 							</li>
 							<li>
 								<span><label for="q2">What is the name of your website?</label></span>
-								<input id="q2" name="q2" type="text"/>
+								<input id="q2" name="website_name" type="text"/>
 							</li>
 							<li>
 								<span><label for="q3">What is the purpose/goal of your website?</label></span>
-								<input id="q3" name="q3" type="text"/>
+								<input id="q3" name="website_purpose" type="text"/>
 							</li>
 							<li>
 								<span><label for="q4">What is your approximate budget for this site?</label></span>
-								<input id="q4" name="q4" type="text"/>
+								<input id="q4" name="budget" type="text"/>
 							</li>
 							<li>
-								<span><label for="q5">What book inspires you?</label></span>
-								<input id="q5" name="q5" type="text"/>
+								<span><label for="q5">What is your name?</label></span>
+								<input id="q5" name="name" type="text"/>
 							</li>
+							<input type="hidden" name="_next" value=0"http://shaneboland.com/questionnaire/thankyou.html" />
+							<input type="hidden" name="_subject" value="Website Questionnaire | Shane Boland" /> 
+
 						</ol><!-- /questions -->
-						<button class="submit" value="Send" type="submit">Send answers</button>
 						<div class="controls">
 							<button class="next"></button>
 							<div class="progress"></div>
@@ -57,6 +60,7 @@
 						</div><!-- / controls -->
 					</div><!-- /simform-inner -->
 					<span class="final-message"></span>
+					<button class="submit" id="submit" value="Send" type="submit">Send answers</button>
 				</form><!-- /simform -->	
 				<p>Made by Shane Boland</p>		
 			</section>
@@ -73,15 +77,13 @@
 					// hide form
 					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
 
-					/*
-					form.submit()
-					or
-					AJAX request (maybe show loading indicator while we don't have an answer..)
-					*/
+					
 
 					var messageEl = theForm.querySelector( '.final-message' );
 					messageEl.innerHTML = 'Thank You! I will be in touch soon.';
 					classie.addClass( messageEl, 'show' );
+					
+					document.getElementById('submit').click();
 				}
 			} );
 		</script>
