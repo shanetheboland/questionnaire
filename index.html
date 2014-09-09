@@ -19,31 +19,47 @@
 		<div class="container">
 			
 			<header class="header">
-				<h1>Looking for a website?<span>Help me out by answering these 5 simple questions.</span></h1>
+				<h1>Looking for a website?<span>Help me out by answering these 9 simple questions.</span></h1>
 			</header>
 			<section>
 				<form method="POST" action="http://forms.brace.io/sboland926@gmail.com" id="theForm" class="simform">
 					<div class="simform-inner">
 						<ol class="questions">
 							<li>
-								<span><label for="q1">What is your email?</label></span>
-								<input id="q1" name="_replyto" type="email"/>
+								<span><label for="q1">What is your name?</label></span>
+								<input id="q1" name="name" type="text"/>
 							</li>
 							<li>
-								<span><label for="q2">What is the name of your website?</label></span>
-								<input id="q2" name="website_name" type="text"/>
+								<span><label for="q2">What is the purpose of your website?</label></span>
+								<input id="q2" name="website_purpose" type="text"/>
 							</li>
 							<li>
-								<span><label for="q3">What is the purpose/goal of your website?</label></span>
-								<input id="q3" name="website_purpose" type="text"/>
+								<span><label for="q3">If ____ , then this website will be a success.</label></span>
+								<input id="q3" name="website_success" type="text"/>
 							</li>
 							<li>
-								<span><label for="q4">What is your approximate budget for this site?</label></span>
-								<input id="q4" name="budget" type="text"/>
+								<span><label for="q4">What is the name of your website?</label></span>
+								<input id="q4" name="website_name" type="text"/>
 							</li>
 							<li>
-								<span><label for="q5">What is your name?</label></span>
-								<input id="q5" name="name" type="text"/>
+								<span><label for="q5">Who is the audience of your website?</label></span>
+								<input id="q5" name="audience" type="text"/>
+							</li>
+							<li>
+								<span><label for="q6">Is this a new website, or a re-design of an existing website?</label></span>
+								<input id="q6" name="new_or_old" type="text"/>
+							</li>
+							<li>
+								<span><label for="q7">How soon do you want this project completed?</label></span>
+								<input id="q7" name="timeframe" type="text"/>
+							</li>
+							<li>
+								<span><label for="q8">What is your approximate budget range for this project?</label></span>
+								<input id="q8" name="budget" type="range" min="0" max="10000" step="100" value="1000"/>
+							</li>
+							<li>
+								<span><label for="q9">Which email address do you prefer?</label></span>
+								<input id="q9" name="_replyto" type="email"/>
 							</li>
 							<input type="hidden" name="_next" value="http://shaneboland.com/questionnaire/thankyou.html" />
 							<input type="hidden" name="_subject" value="Website Questionnaire | Shane Boland" /> 
@@ -79,7 +95,7 @@
 					
 
 					var messageEl = theForm.querySelector( '.final-message' );
-					messageEl.innerHTML = 'Thank You! I will be in touch soon.';
+					messageEl.innerHTML = 'Thank You! I will be in touch within 24 hours.';
 					classie.addClass( messageEl, 'show' );
 
 					document.getElementById('submit').click();
